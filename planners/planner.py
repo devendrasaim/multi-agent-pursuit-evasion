@@ -89,7 +89,7 @@ class Node:
         nxt_cur = (cur[0] + mod_action[0], cur[1] + mod_action[1])
         
         if not (0 <= nxt_cur[0] < rows and 0 <= nxt_cur[1] < cols) or grid[nxt_cur] == 1:
-            nxt_cur = cur
+            nxt_cur = cur  
 
         tom_action = self.move(grid, pursued, pursuer)
         tom_mod_action = self.apply_probabilistic_transition(tom_action, np.random.choice(3, p=prob))
